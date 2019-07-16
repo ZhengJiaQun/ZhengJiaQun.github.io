@@ -5,10 +5,21 @@
     <link>https://ZhengJiaQun.github.io/post/</link>
     <description>Recent content in Posts on ZJQ Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 16 Jul 2019 16:02:41 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jul 2019 16:53:13 +0800</lastBuildDate>
     
 	<atom:link href="https://ZhengJiaQun.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>委托</title>
+      <link>https://ZhengJiaQun.github.io/post/second/</link>
+      <pubDate>Tue, 16 Jul 2019 16:53:13 +0800</pubDate>
+      
+      <guid>https://ZhengJiaQun.github.io/post/second/</guid>
+      <description>委托给了C#操作函数的灵活性，我们可使用委托像操作变量一样来操作函数，其实这个功能并不是C#的首创，早在C++时代就有函数指针这一说法，而在我看来委托就是C#的函数指针，首先先简要的介绍一下委托的基本知识：
+委托的定义 委托的声明原型是 delegate &amp;lt;函数返回类型&amp;gt; &amp;lt;委托名&amp;gt; (&amp;lt;函数参数&amp;gt;) 例子：public delegate void CheckDelegate(int number);//定义了一个委托CheckDelegate,它可以注册返回void类型且有一个int作为参数的函数 这样就定义了一个委托，但是委托在.net内相当于声明了一个类(在后面的代码中会讲到确实如此)，类如果不实例化为对象，很多功能是没有办法使用的，委托也是如此.
+委托的实例化 委托实例化的原型是 &amp;lt;委托类型&amp;gt; &amp;lt;实例化名&amp;gt;=new &amp;lt;委托类型&amp;gt;(&amp;lt;注册函数&amp;gt;) 例子：CheckDelegate _checkDelegate=new CheckDelegate(CheckMod);//用函数CheckMod实例化上面的CheckDelegate 委托为_checkDelegate 在.net 2.0开始可以直接用匹配的函数实例化委托： &amp;lt;委托类型&amp;gt; &amp;lt;实例化名&amp;gt;=&amp;lt;注册函数&amp;gt; 例子：CheckDelegate _checkDelegate=CheckMod;//用函数CheckMod实例化上面的CheckDelegate 委托为_checkDelegate 现在我们就可以像使用函数一样来使用委托了,在上面的例子中现在执行_checkDelegate()就等同于执行CheckMod(),最关键的是现在函数CheckMod相当于放在了变量当中，它可以传递给其它的CheckDelegate引用对象，而且可以作为函数参数传递到其他函数内，也可以作为函数的返回类型</description>
+    </item>
     
     <item>
       <title>MarkDown语法</title>
@@ -20,7 +31,7 @@
 如果你无法简洁的表达你的想法，那只说明你还不够了解它。
 有序列表 在行首添加1.、2.、3.，即数字和英文句点，数字不需要连续的，也可以都是1.
 无序列表 在行首添加*或- *无序列表1 *无序列表2
-插入图片 插入链接 [描述][链接地址]
+插入链接 [描述][链接地址]
 表格 | 笔记|更新 | 版本 | |&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;|&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;|&amp;mdash;&amp;mdash;&amp;ndash;| | WizNote | Markdown| Latest |
 代码 在代码的前后添加三个反单引号：“““,其中前三个反单引号后面可以根写代码语言的名字，以方面渲染。例如：
 alert(&amp;quot;hello world!&amp;quot;);  1 目录 在任何想要展示Markdown笔记目录的地方，添加[TOC]
