@@ -50,6 +50,24 @@
     </item>
     
     <item>
+      <title>MarkDown语法</title>
+      <link>https://zhengjiaqun.github.io/post/third/</link>
+      <pubDate>Tue, 16 Jul 2019 16:02:41 +0800</pubDate>
+      
+      <guid>https://zhengjiaqun.github.io/post/third/</guid>
+      <description>#标题一 ##标题二 *这一点 加粗 斜体 删除线 在文字前添加&amp;gt; 点击保存后的效果是：
+如果你无法简洁的表达你的想法，那只说明你还不够了解它。
+有序列表 在行首添加1.、2.、3.，即数字和英文句点，数字不需要连续的，也可以都是1.
+无序列表 在行首添加*或- *无序列表1 *无序列表2
+插入链接 [描述][链接地址]
+表格 | 笔记|更新 | 版本 | |&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;|&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;|&amp;mdash;&amp;mdash;&amp;ndash;| | WizNote | Markdown| Latest |
+代码 在代码的前后添加三个反单引号：“““,其中前三个反单引号后面可以根写代码语言的名字，以方面渲染。例如：
+alert(&amp;quot;hello world!&amp;quot;);  1 目录 在任何想要展示Markdown笔记目录的地方，添加[TOC]
+脚注
+在要添加注释的词语后面添加[^1],结尾加入[^1]:空格 注释内容 作者：萝卜-兔子 来源：CSDN 原文：https://blog.csdn.net/abcwangruili/article/details/78020201 版权声明：本文为博主原创文章，转载请附上博文链接！</description>
+    </item>
+    
+    <item>
       <title>这是我的第一篇博客文章</title>
       <link>https://zhengjiaqun.github.io/post/first/</link>
       <pubDate>Tue, 16 Jul 2019 15:07:11 +0800</pubDate>
