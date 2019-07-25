@@ -3,39 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.com/post/new/</loc>
+    <loc>https://zhengjiaqun.github.io/post/new/</loc>
     <lastmod>2019-07-25T09:05:13+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/post/</loc>
-    <lastmod>2019-07-25T09:05:13+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://example.com/</loc>
+    <loc>https://zhengjiaqun.github.io/post/</loc>
     <lastmod>2019-07-25T09:05:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/post/second/</loc>
+    <loc>https://zhengjiaqun.github.io/</loc>
+    <lastmod>2019-07-25T09:05:13+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhengjiaqun.github.io/post/second/</loc>
     <lastmod>2019-07-16T16:53:13+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/post/first/</loc>
+    <loc>https://zhengjiaqun.github.io/post/first/</loc>
     <lastmod>2019-07-16T15:07:11+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/categories/</loc>
+    <loc>https://zhengjiaqun.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://example.com/tags/</loc>
+    <loc>https://zhengjiaqun.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="ZJQ" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://example.com/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+    <link rel="stylesheet" href="https://zhengjiaqun.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
 
     
     <meta name="twitter:card" content="summary"/>
@@ -21,7 +21,7 @@
 委托的定义 委托的声明原型是 delegate &lt;函数返回类型&gt; &lt;委托名&gt; (&lt;函数参数&gt;) 例子：public delegate void CheckDelegate(int number);//定义了一个委托CheckDelegate,它可以注册返回void类型且有一个int作为参数的函数 这样就定义了一个委托，但是委托在.net内相当于声明了一个类(在后面的代码中会讲到确实如此)，类如果不实例化为对象，很多功能是没有办法使用的，委托也是如此.
 委托的实例化 委托实例化的原型是 &lt;委托类型&gt; &lt;实例化名&gt;=new &lt;委托类型&gt;(&lt;注册函数&gt;) 例子：CheckDelegate _checkDelegate=new CheckDelegate(CheckMod);//用函数CheckMod实例化上面的CheckDelegate 委托为_checkDelegate 在.net 2.0开始可以直接用匹配的函数实例化委托： &lt;委托类型&gt; &lt;实例化名&gt;=&lt;注册函数&gt; 例子：CheckDelegate _checkDelegate=CheckMod;//用函数CheckMod实例化上面的CheckDelegate 委托为_checkDelegate 现在我们就可以像使用函数一样来使用委托了,在上面的例子中现在执行_checkDelegate()就等同于执行CheckMod(),最关键的是现在函数CheckMod相当于放在了变量当中，它可以传递给其它的CheckDelegate引用对象，而且可以作为函数参数传递到其他函数内，也可以作为函数的返回类型" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://example.com/post/second/" />
+<meta property="og:url" content="https://zhengjiaqun.github.io/post/second/" />
 <meta property="article:published_time" content="2019-07-16T16:53:13&#43;08:00"/>
 <meta property="article:modified_time" content="2019-07-16T16:53:13&#43;08:00"/>
 
@@ -29,7 +29,7 @@
   </head>
   <body>
     <header class="app-header">
-      <a href="https://example.com"><img class="app-header-avatar" src="/avatar.jpg" alt="ZJQ" /></a>
+      <a href="https://zhengjiaqun.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="ZJQ" /></a>
       <h1>ZJQ Blog</h1>
       <p>Talk is cheap. Show me the code.</p>
       <div class="app-header-social">
