@@ -17,25 +17,25 @@
       
       <guid>https://zhengjiaqun.github.io/post/new/</guid>
       <description>本篇文章主要介绍元素的Position属性，此属性可以设置元素在页面的定位方式。
-目录 1. 介绍 position：介绍position的值以及辅助属性。
-2. position 定位方式：介绍position的四种定位方式：绝对、相对、固定、默认。
-3. 总结 position：以示例的方式展示position。
-1. 介绍 1.1 说明 Position 属性：规定元素的定位类型。即元素脱离文档流的布局，在页面的任意位置显示。
-1.2 主要的值 ①absolute ：绝对定位；脱离文档流的布局，遗留下来的空间由后面的元素填充。定位的起始位置为最近的父元素(postion不为static)，否则为Body文档本身。
+Position 属性：规定元素的定位类型。即元素脱离文档流的布局，在页面的任意位置显示。
+①absolute ：绝对定位；脱离文档流的布局，遗留下来的空间由后面的元素填充。定位的起始位置为最近的父元素(postion不为static)，否则为Body文档本身。
 ②relative ：相对定位；不脱离文档流的布局，只改变自身的位置，在文档流原先的位置遗留空白区域。定位的起始位置为此元素原先在文档流的位置。
 ③fixed ：固定定位；类似于absolute，但不随着滚动条的移动而改变位置。
 ④static ：默认值；默认布局。
-1.3 辅助属性 position属性只是使元素脱离文档流，要想此元素能按照希望的位置显示，就需要使用下面的属性(position:static不支持这些)：
+position属性只是使元素脱离文档流，要想此元素能按照希望的位置显示，就需要使用下面的属性(position:static不支持这些)：
 ①left ： 表示向元素的左边插入多少像素，使元素向右移动多少像素。
 ②right ：表示向元素的右边插入多少像素，使元素向左移动多少像素。
 ③top ：表示向元素的上方插入多少像素，使元素向下移动多少像素。
 ④bottom ：表示向元素的下方插入多少像素，使元素向上移动多少像素。
 上面属性的值可以为负，单位：px 。
-2. position 定位方式 2.1 position:absolute 2.1.1 说明 绝对定位；脱离文档流的布局，遗留下来的空间由后面的元素填充。定位的起始位置为最近的父元素(postion不为static)，否则为Body文档本身。
-2.1.2 视图 2.2 position:relative 2.2.1 说明 相对定位；不脱离文档流的布局，只改变自身的位置，在文档流原先的位置遗留空白区域。定位的起始位置为此元素原先在文档流的位置。
-2.2.2 视图 2.3 position:fixed 2.3.1 说明 固定定位；类似于absolute，但不随着滚动条的移动而改变位置。
-2.3.2 视图 2.3.3 应用场景 ①登录框覆盖层：如dz论坛的登录。
-②虚假QQ消息广告。</description>
+position:absolute 绝对定位；脱离文档流的布局，遗留下来的空间由后面的元素填充。定位的起始位置为最近的父元素(postion不为static)，否则为Body文档本身。
+position:relative 相对定位；不脱离文档流的布局，只改变自身的位置，在文档流原先的位置遗留空白区域。定位的起始位置为此元素原先在文档流的位置。
+position:fixed 固定定位；类似于absolute，但不随着滚动条的移动而改变位置。
+position:static
+默认定位，表示此元素为默认定位方式。
+总结 当含有position属性的元素为最边缘元素时：
+①absolute 和 relative ：含有此2个值的边缘元素，浏览器缩小到此元素不可见时，会出现滚动条。
+②fixed ：含有此值的边缘元素，浏览器缩小到此元素不可见时，不会出现滚动条。</description>
     </item>
     
     <item>
@@ -44,9 +44,12 @@
       <pubDate>Tue, 16 Jul 2019 16:53:13 +0800</pubDate>
       
       <guid>https://zhengjiaqun.github.io/post/second/</guid>
-      <description>委托给了C#操作函数的灵活性，我们可使用委托像操作变量一样来操作函数，其实这个功能并不是C#的首创，早在C++时代就有函数指针这一说法，而在我看来委托就是C#的函数指针，首先先简要的介绍一下委托的基本知识：
-委托的定义 委托的声明原型是 delegate &amp;lt;函数返回类型&amp;gt; &amp;lt;委托名&amp;gt; (&amp;lt;函数参数&amp;gt;) 例子：public delegate void CheckDelegate(int number);//定义了一个委托CheckDelegate,它可以注册返回void类型且有一个int作为参数的函数 这样就定义了一个委托，但是委托在.net内相当于声明了一个类(在后面的代码中会讲到确实如此)，类如果不实例化为对象，很多功能是没有办法使用的，委托也是如此.
-委托的实例化 委托实例化的原型是 &amp;lt;委托类型&amp;gt; &amp;lt;实例化名&amp;gt;=new &amp;lt;委托类型&amp;gt;(&amp;lt;注册函数&amp;gt;) 例子：CheckDelegate _checkDelegate=new CheckDelegate(CheckMod);//用函数CheckMod实例化上面的CheckDelegate 委托为_checkDelegate 在.net 2.0开始可以直接用匹配的函数实例化委托： &amp;lt;委托类型&amp;gt; &amp;lt;实例化名&amp;gt;=&amp;lt;注册函数&amp;gt; 例子：CheckDelegate _checkDelegate=CheckMod;//用函数CheckMod实例化上面的CheckDelegate 委托为_checkDelegate 现在我们就可以像使用函数一样来使用委托了,在上面的例子中现在执行_checkDelegate()就等同于执行CheckMod(),最关键的是现在函数CheckMod相当于放在了变量当中，它可以传递给其它的CheckDelegate引用对象，而且可以作为函数参数传递到其他函数内，也可以作为函数的返回类型</description>
+      <description>委托：委托给了C#操作函数的灵活性，我们可使用委托像操作变量一样来操作函数，其实这个功能并不是C#的首创，早在C++时代就有函数指针这一说法，而在我看来委托就是C#的函数指针，首先先简要的介绍一下委托的基本知识：
+1.委托的定义 1.1 委托的声明原型是 delegate &amp;lt;函数返回类型&amp;gt; &amp;lt;委托名&amp;gt; (&amp;lt;函数参数&amp;gt;) 例子：public delegate void CheckDelegate(int number);//定义了一个委托CheckDelegate,它可以注册返回void类型且有一个int作为参数的函数。
+这样就定义了一个委托，但是委托在.net内相当于声明了一个类(在后面的代码中会讲到确实如此)，类如果不实例化为对象，很多功能是没有办法使用的，委托也是如此.
+2.委托的实例化 2.1 委托实例化的原型是 &amp;lt;委托类型&amp;gt; &amp;lt;实例化名&amp;gt;=new &amp;lt;委托类型&amp;gt;(&amp;lt;注册函数&amp;gt;) 例子：CheckDelegate _checkDelegate=new CheckDelegate(CheckMod);//用函数CheckMod实例化上面的CheckDelegate 委托为_checkDelegate：
+2.2 在.net 2.0开始可以直接用匹配的函数实例化委托： &amp;lt;委托类型&amp;gt; &amp;lt;实例化名&amp;gt;=&amp;lt;注册函数&amp;gt; 例子：CheckDelegate _checkDelegate=CheckMod;//用函数CheckMod实例化上面的CheckDelegate 委托为_checkDelegate。
+现在我们就可以像使用函数一样来使用委托了,在上面的例子中现在执行_checkDelegate()就等同于执行CheckMod(),最关键的是现在函数CheckMod相当于放在了变量当中，它可以传递给其它的CheckDelegate引用对象，而且可以作为函数参数传递到其他函数内，也可以作为函数的返回类型</description>
     </item>
     
     <item>
@@ -73,8 +76,8 @@ alert(&amp;quot;hello world!&amp;quot;);  1 目录 在任何想要展示Markdown
       <pubDate>Tue, 16 Jul 2019 15:07:11 +0800</pubDate>
       
       <guid>https://zhengjiaqun.github.io/post/first/</guid>
-      <description>第一篇博客文章
-一、MVC简介
+      <description>个人博客网站搭建成功，以后就可以写写笔记了。。。
+第一篇博客文章 一、MVC简介
 MVC：Model-View-Controller（模型-视图-控制器），MVC是一种软件开发架构模式。
 1、模型（Model）
 模型对象是实现应用程序数据域逻辑的应用程序部件。 通常，模型对象会检索模型状态并将其存储在数据库中。 例如，Product 对象可能会从数据库中检索信息，操作该信息，然后将更新的信息写回到数据库内的 Product 表中。
