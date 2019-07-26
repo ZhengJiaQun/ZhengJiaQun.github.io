@@ -5,10 +5,37 @@
     <link>https://zhengjiaqun.github.io/post/</link>
     <description>Recent content in Posts on ZJQ Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 25 Jul 2019 09:05:13 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jul 2019 14:36:00 +0800</lastBuildDate>
     
 	<atom:link href="https://zhengjiaqun.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo博客搭建过程</title>
+      <link>https://zhengjiaqun.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/</link>
+      <pubDate>Fri, 26 Jul 2019 14:36:00 +0800</pubDate>
+      
+      <guid>https://zhengjiaqun.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/</guid>
+      <description>Hugo+Github搭建个人博客 1.下载安装hugo和git，hugo可以到Github上下载，下载到电脑后把hugo.exe文件所在的目录添加到电脑环境path中。打开git base ，hugo version,出现图中信息就成功安装了。
+2.在电脑新建一个Blog文件夹存放博客文件，进入Blog， 使用hugo new site myblog,这样就在myblog下生成初始站点。
+3.在myblog根目录下clone hugo主题，并在本地编译调试启动。首次执行hugo server &amp;ndash;theme=主题名 &amp;ndash;buildDrafts与主题名关联。
+4.进入content文件夹，hugo new post/xxx.md新建一篇markdown格式文章并用VS Code编辑并保存。
+5.在github上部署，新建一个仓库并命名为“你的github名.github.io”,回到根目录myblog，使用hugo &amp;ndash;theme=主题名 baseUrl=“https://ZhengJiaQun.github.io/” 生成最终页面。进入生成的public文件夹。
+1.git init
+2.git remote add origin https://ZhengJiaQun/ZhengJiaQun.github.io
+3.git add .
+4.git commit -m &amp;ldquo;提交信息&amp;rdquo;
+5.git push origin master
+6.后续写文章时可以省去一些工作，同样写好文档后回到根目录，执行hugo server -D 本地先编译预览看效果。访问localhost：1313
+7.预览后觉得符合期待后在根目录再次执行hugo 生成新的public里的页面，不符合可在本地预览开启的时候继续修改，会马上看到页面效果。
+8.本地的没问题了，就得把更新的文章推送到远端仓库。进入public文件夹。和第一次的操作很类似，但不需要再次关联远端仓库了，还有push之前需要先pull，以后更新也都是这样操作。
+1.git add .
+2.git commit -m &amp;ldquo;提交信息&amp;rdquo;
+3.git pull origin master
+4.git push origin master
+如果一些顺利，就可以再次访问博客了，就可以看到新的文章了。
+9.主题自定义一般在根目录下config.toml 里修改，或是在themes 里的相关文件，一般需要看对应的主题文档用户手册。 需要继续研究探索，玩转自己的个人博客。</description>
+    </item>
     
     <item>
       <title>Position属性</title>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Hugo博客搭建过程 // ZJQ Blog</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="ZJQ" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://zhengjiaqun.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo博客搭建过程"/>
+<meta name="twitter:description" content="Hugo&#43;Github搭建个人博客 1.下载安装hugo和git，hugo可以到Github上下载，下载到电脑后把hugo.exe文件所在的目录添加到电脑环境path中。打开git base ，hugo version,出现图中信息就成功安装了。
+2.在电脑新建一个Blog文件夹存放博客文件，进入Blog， 使用hugo new site myblog,这样就在myblog下生成初始站点。
+3.在myblog根目录下clone hugo主题，并在本地编译调试启动。首次执行hugo server &ndash;theme=主题名 &ndash;buildDrafts与主题名关联。
+4.进入content文件夹，hugo new post/xxx.md新建一篇markdown格式文章并用VS Code编辑并保存。
+5.在github上部署，新建一个仓库并命名为“你的github名.github.io”,回到根目录myblog，使用hugo &ndash;theme=主题名 baseUrl=“https://ZhengJiaQun.github.io/” 生成最终页面。进入生成的public文件夹。
+1.git init
+2.git remote add origin https://ZhengJiaQun/ZhengJiaQun.github.io
+3.git add .
+4.git commit -m &ldquo;提交信息&rdquo;
+5.git push origin master
+6.后续写文章时可以省去一些工作，同样写好文档后回到根目录，执行hugo server -D 本地先编译预览看效果。访问localhost：1313
+7.预览后觉得符合期待后在根目录再次执行hugo 生成新的public里的页面，不符合可在本地预览开启的时候继续修改，会马上看到页面效果。
+8.本地的没问题了，就得把更新的文章推送到远端仓库。进入public文件夹。和第一次的操作很类似，但不需要再次关联远端仓库了，还有push之前需要先pull，以后更新也都是这样操作。
+1.git add .
+2.git commit -m &ldquo;提交信息&rdquo;
+3.git pull origin master
+4.git push origin master
+如果一些顺利，就可以再次访问博客了，就可以看到新的文章了。
+9.主题自定义一般在根目录下config.toml 里修改，或是在themes 里的相关文件，一般需要看对应的主题文档用户手册。 需要继续研究探索，玩转自己的个人博客。"/>
+
+    <meta property="og:title" content="Hugo博客搭建过程" />
+<meta property="og:description" content="Hugo&#43;Github搭建个人博客 1.下载安装hugo和git，hugo可以到Github上下载，下载到电脑后把hugo.exe文件所在的目录添加到电脑环境path中。打开git base ，hugo version,出现图中信息就成功安装了。
+2.在电脑新建一个Blog文件夹存放博客文件，进入Blog， 使用hugo new site myblog,这样就在myblog下生成初始站点。
+3.在myblog根目录下clone hugo主题，并在本地编译调试启动。首次执行hugo server &ndash;theme=主题名 &ndash;buildDrafts与主题名关联。
+4.进入content文件夹，hugo new post/xxx.md新建一篇markdown格式文章并用VS Code编辑并保存。
+5.在github上部署，新建一个仓库并命名为“你的github名.github.io”,回到根目录myblog，使用hugo &ndash;theme=主题名 baseUrl=“https://ZhengJiaQun.github.io/” 生成最终页面。进入生成的public文件夹。
+1.git init
+2.git remote add origin https://ZhengJiaQun/ZhengJiaQun.github.io
+3.git add .
+4.git commit -m &ldquo;提交信息&rdquo;
+5.git push origin master
+6.后续写文章时可以省去一些工作，同样写好文档后回到根目录，执行hugo server -D 本地先编译预览看效果。访问localhost：1313
+7.预览后觉得符合期待后在根目录再次执行hugo 生成新的public里的页面，不符合可在本地预览开启的时候继续修改，会马上看到页面效果。
+8.本地的没问题了，就得把更新的文章推送到远端仓库。进入public文件夹。和第一次的操作很类似，但不需要再次关联远端仓库了，还有push之前需要先pull，以后更新也都是这样操作。
+1.git add .
+2.git commit -m &ldquo;提交信息&rdquo;
+3.git pull origin master
+4.git push origin master
+如果一些顺利，就可以再次访问博客了，就可以看到新的文章了。
+9.主题自定义一般在根目录下config.toml 里修改，或是在themes 里的相关文件，一般需要看对应的主题文档用户手册。 需要继续研究探索，玩转自己的个人博客。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zhengjiaqun.github.io/post/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/" />
+<meta property="article:published_time" content="2019-07-26T14:36:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-07-26T14:36:00&#43;08:00"/>
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://zhengjiaqun.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="ZJQ" /></a>
+      <h1>ZJQ Blog</h1>
+      <p>Talk is cheap. Show me the code.</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/ZhengJiaQun"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://twitter.com/gohugoio"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Hugo博客搭建过程</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 26, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<h3 id="hugo-github搭建个人博客">Hugo+Github搭建个人博客</h3>
+
+<hr />
+
+<p>1.下载安装hugo和git，hugo可以到Github上下载，下载到电脑后把hugo.exe文件所在的目录添加到电脑环境path中。打开<strong>git base</strong> ，<strong>hugo version</strong>,出现图中信息就成功安装了。</p>
+
+<p><img src="https://raw.githubusercontent.com/ZhengJiaQun/MyImages/master/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E6%96%87%E7%AB%A0/hugo%E5%AE%89%E8%A3%85.png" alt="hugo" /></p>
+
+<p>2.在电脑新建一个Blog文件夹存放博客文件，进入Blog，
+使用<strong>hugo new site myblog</strong>,这样就在myblog下生成初始站点。</p>
+
+<p><img src="https://raw.githubusercontent.com/ZhengJiaQun/MyImages/master/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E6%96%87%E7%AB%A0/%E7%94%9F%E6%88%90%E7%AB%99%E7%82%B9.png" alt="生成站点" /></p>
+
+<p>3.在myblog根目录下clone hugo主题，并在本地编译调试启动。首次执行<strong>hugo server &ndash;theme=主题名 &ndash;buildDrafts</strong>与主题名关联。</p>
+
+<p><img src="https://raw.githubusercontent.com/ZhengJiaQun/MyImages/master/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E6%96%87%E7%AB%A0/%E4%B8%8B%E8%BD%BD%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98.png" alt="下载主题皮肤" /></p>
+
+<p>4.进入content文件夹，<strong>hugo new post/xxx.md</strong>新建一篇markdown格式文章并用VS Code编辑并保存。</p>
+
+<p><img src="https://raw.githubusercontent.com/ZhengJiaQun/MyImages/master/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E6%96%87%E7%AB%A0/%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0.png" alt="新建文章" /></p>
+
+<p>5.在github上部署，新建一个仓库并命名为“你的github名.github.io”,回到根目录myblog，使用<strong>hugo &ndash;theme=主题名 baseUrl=“<a href="https://ZhengJiaQun.github.io/”">https://ZhengJiaQun.github.io/”</a></strong> 生成最终页面。进入生成的public文件夹。<br />
+1.<strong>git init</strong><br />
+2.<strong>git remote add origin <a href="https://ZhengJiaQun/ZhengJiaQun.github.io">https://ZhengJiaQun/ZhengJiaQun.github.io</a></strong><br />
+3.<strong>git add .</strong><br />
+4.<strong>git commit -m &ldquo;提交信息&rdquo;</strong><br />
+5.<strong>git push origin master</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/ZhengJiaQun/MyImages/master/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E6%96%87%E7%AB%A0/%E9%83%A8%E7%BD%B2%E5%88%B0Github.png" alt="部署" /></p>
+
+<p>6.后续写文章时可以省去一些工作，同样写好文档后回到根目录，执行<strong>hugo server -D</strong> 本地先编译预览看效果。访问<strong>localhost：1313</strong></p>
+
+<p><img src="https://raw.githubusercontent.com/ZhengJiaQun/MyImages/master/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E6%96%87%E7%AB%A0/%E5%9C%A8%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%9C%AC%E5%9C%B0%E7%BC%96%E8%AF%91%E5%90%AF%E5%8A%A8.png" alt="预览" /></p>
+
+<p>7.预览后觉得符合期待后在根目录再次执行<strong>hugo</strong> 生成新的public里的页面，不符合可在本地预览开启的时候继续修改，会马上看到页面效果。</p>
+
+<p><img src="https://raw.githubusercontent.com/ZhengJiaQun/MyImages/master/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E6%96%87%E7%AB%A0/%E6%9C%AC%E5%9C%B0%E7%94%9F%E6%88%90%E8%81%9A%E5%90%88%E9%A1%B5%E9%9D%A2.png" alt="生成新页面" /></p>
+
+<p>8.本地的没问题了，就得把更新的文章推送到远端仓库。进入public文件夹。和第一次的操作很类似，但不需要再次关联远端仓库了，还有push之前需要先pull，以后更新也都是这样操作。<br />
+1.<strong>git add .</strong><br />
+2.<strong>git commit -m &ldquo;提交信息&rdquo;</strong><br />
+3.<strong>git pull origin master</strong><br />
+4.<strong>git push origin master</strong><br />
+如果一些顺利，就可以再次访问博客了，就可以看到新的文章了。</p>
+
+<p><img src="https://raw.githubusercontent.com/ZhengJiaQun/MyImages/master/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E6%96%87%E7%AB%A0/%E6%8F%90%E4%BA%A4%E6%96%B0%E7%9A%84%E6%96%87%E7%AB%A0%E7%9A%84%E6%93%8D%E4%BD%9C.png" alt="更新文章操作" /></p>
+
+<p>9.主题自定义一般在根目录下<strong>config.toml</strong> 里修改，或是在<strong>themes</strong> 里的相关文件，一般需要看对应的主题文档用户手册。
+需要继续研究探索，玩转自己的个人博客。</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
